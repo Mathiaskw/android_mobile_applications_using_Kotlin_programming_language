@@ -32,9 +32,6 @@ private var binding: FragmentWelcomeBinding? = null
     }
     fun gotonextScreen(takeNamethere: String) {
         if (sharedModell.nameINullorEmpty()) {
-           Toast.makeText(requireContext(), "Please Enter Name To Proceed", Toast.LENGTH_SHORT).show()
-        }
-        else{
             sharedModell.getNamesEntered(takeNamethere)
         }
         findNavController().navigate(R.id.action_welcomeFragment_to_displayFragment)

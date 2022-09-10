@@ -30,7 +30,7 @@
         <TextView
             android:id="@+id/tesxt3"
             android:layout_width="wrap_content"
-            android:layout_height="55dp"
+            android:layout_height="65dp"
             android:gravity="center"
             android:textStyle="bold"
             android:layout_below="@id/tesxt2"
