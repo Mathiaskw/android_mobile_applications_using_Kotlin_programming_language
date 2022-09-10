@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="viewmodel"
+            type="com.example.infopurse.model.SharedViewModel" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".DisplayFragment">
+
+        <TextView
+            android:id="@+id/tesxt2"
+            android:layout_width="wrap_content"
+            android:layout_height="55dp"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:background="@drawable/styling"
+            android:layout_marginTop="160dp"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:layout_centerHorizontal="true"
+            android:text="@{viewmodel.namesEntered}" />
+
+        <TextView
+            android:id="@+id/tesxt3"
+            android:layout_width="wrap_content"
+            android:layout_height="55dp"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:layout_below="@id/tesxt2"
+            android:textSize="20sp"
+            android:background="@drawable/styling"
+            android:layout_marginTop="160dp"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:layout_centerHorizontal="true"
+            android:text="@{@string/show_it(viewmodel.namesEntered)}" />
+
+    </RelativeLayout>
+</layout>

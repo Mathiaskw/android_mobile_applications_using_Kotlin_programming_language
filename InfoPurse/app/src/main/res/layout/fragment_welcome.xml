@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="viewmodel"
+            type="com.example.infopurse.model.SharedViewModel" />
+        <variable
+            name="moveNext"
+            type="com.example.infopurse.WelcomeFragment" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".WelcomeFragment">
+
+        <TextView
+            android:id="@+id/tesxt1"
+            android:layout_width="wrap_content"
+            android:layout_height="55dp"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:background="@drawable/styling"
+            android:layout_marginTop="160dp"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:layout_centerHorizontal="true"
+            android:text="@string/the_testing_app" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/conteiner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="160dp"
+            android:layout_below="@id/tesxt1">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/enter_Name"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:paddingEnd="15dp"
+                android:paddingStart="15dp"
+                android:background="@drawable/styling"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                android:inputType="text"
+                android:hint="@string/welcome_entername" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/button_next"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/conteiner"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/button_style"
+            android:text="@string/next"
+            android:onClick="@{() -> moveNext.gotonextScreen(enterName.getText().toString())}"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+    </RelativeLayout>
+</layout>

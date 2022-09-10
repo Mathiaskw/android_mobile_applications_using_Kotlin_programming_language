@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Info Purse</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="welcome_entername">Welcome, EnterName</string>
+    <string name="the_testing_app">The testing APP</string>
+    <string name="show_it">%s you are most welcome</string>
+    <string name="Details">Welcome Again</string>
+    <string name="next">NEXT</string>
+</resources>
